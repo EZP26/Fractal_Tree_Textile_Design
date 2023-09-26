@@ -8,7 +8,7 @@ function setup() {
   background(220);
   stroke(0);
   translate(width / 2, height);
-  branch(trunkHeight, uniWidth, 20);
+  branch(trunkHeight, uniWidth, 10);
 }
 
 function branch(branchHeight, branchWidth, angle){
@@ -22,7 +22,8 @@ function branch(branchHeight, branchWidth, angle){
   angle += Math.floor(Math.random() * 10);
   
   branchHeight = branchHeight * 0.9;
-  branchWidth = branchWidth * 0.9;
+  branchWidth = branchWidth * 0.75;
+  angle = angle * 1.05;
 
   push();
   rotate(angle);
