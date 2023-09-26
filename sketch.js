@@ -1,6 +1,6 @@
-let trunkHeight = 50;
+let trunkHeight = 75;
 let uniWidth = 5;
-let minBranchHeight = 15;
+let minBranchHeight = 40;
 
 function setup() {
   createCanvas(700, 700);
@@ -9,9 +9,6 @@ function setup() {
   stroke(0);
   translate(width / 2, height);
   branch(trunkHeight, uniWidth, 10);
-}
-
-function draw() {
 }
 
 function branch(branchHeight, branchWidth, angle){
@@ -23,7 +20,16 @@ function branch(branchHeight, branchWidth, angle){
   translate(0, -branchHeight);
   angle += Math.floor(Math.random() * 30);
   
-  rotate(angle);
   branchHeight = branchHeight * 0.9;
-  branch(branchHeight, uniWidth, angle);
+  branchWidth = branchWidth * 0.95;
+
+  push();
+  rotate(angle);
+  branch(branchHeight, branchWidth, angle);
+  pop();
+  
+  push();
+  rotate(-angle);
+  branch(branchHeight, branchWidth, angle);
+  pop();
 }
