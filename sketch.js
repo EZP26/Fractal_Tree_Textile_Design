@@ -31,26 +31,29 @@ function branch(branchHeight, branchWidth, angle){
 
   push();
   rotate(angle);
+  if (branchHeight < 20){
+    for (let k =0; k < 15; k++){
+      fill(214, 140, 43);
+      noStroke();
+      let RNDW = Math.floor(Math.random() * 10 + 5);
+      let RNDH = Math.floor(Math.random() * 10 + 5);
+      ellipse(branchHeight, branchWidth, RNDH, RNDW);
+    }
+  }
   branch(branchHeight, branchWidth, angle);
   pop();
   
   push();
   rotate(-angle);
-  for (let i = 0; i < 10; i++){
-    petalRNDX = (branchHeight * 0.25) + Math.floor(Math.random() * 40 - 20);
-    petalPNDY = (branchHeight * 0.25) + Math.floor(Math.random() * 40 - 20);
-    ellipse(petalRNDX, petalRNDY, petalWidth, petalHeight);
+  if (branchHeight < 20){
+    for (let k =0; k < 15; k++){
+      fill(214, 140, 43);
+      noStroke();
+      let RNDW = Math.floor(Math.random() * 10 + 5);
+      let RNDH = Math.floor(Math.random() * 10 + 5);
+      ellipse(branchHeight, branchWidth, RNDH, RNDW);
+    }
   }
   branch(branchHeight, branchWidth, angle);
   pop();
-}
-
-function petals(petalX, petalY, petalHeight, petalWidth){
-  let petalRNDX;
-  let petalRNDY;
-  for (let i = 0; i < 10; i++){
-    petalRNDX = petalX + Math.floor(Math.random() * 40 - 20);
-    petalPNDY = petalY + Math.floor(Math.random() * 40 - 20);
-    ellipse(petalRNDX, petalRNDY, petalWidth, petalHeight);
-  }
 }
