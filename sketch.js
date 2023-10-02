@@ -31,16 +31,15 @@ function branch(branchHeight, branchWidth, angle){
 
   push();
   rotate(angle);
-  if (branchHeight < 20){
-    petals(0, 0, petalWidth, petalHeight);
-  }
   branch(branchHeight, branchWidth, angle);
   pop();
   
   push();
   rotate(-angle);
-  if (branchHeight < 20){
-    petals(0, 0, petalWidth, petalHeight);
+  for (let i = 0; i < 10; i++){
+    petalRNDX = (branchHeight * 0.25) + Math.floor(Math.random() * 40 - 20);
+    petalPNDY = (branchHeight * 0.25) + Math.floor(Math.random() * 40 - 20);
+    ellipse(petalRNDX, petalRNDY, petalWidth, petalHeight);
   }
   branch(branchHeight, branchWidth, angle);
   pop();
