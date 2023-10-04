@@ -4,9 +4,12 @@ let minBranchHeight = 20;
 let petalWidth;
 let petalHeight
 
-function setup() {
+function setup(){
+  frameRate(1);
   createCanvas(800, 800);
   angleMode(DEGREES);
+}
+function draw() {
   background(220);
   stroke(0);
   translate(width / 2, height);
