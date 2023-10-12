@@ -1,6 +1,6 @@
-let trunkHeight = 75;
+let trunkHeight = 105;
 let uniWidth = 5;
-let minBranchHeight = 20;
+let minBranchHeight = 15;
 let petalWidth;
 let petalHeight
 
@@ -8,8 +8,6 @@ function setup(){
   frameRate(1);
   createCanvas(800, 800);
   angleMode(DEGREES);
-}
-function draw() {
   background(220);
   stroke(0);
   translate(width / 2, height);
@@ -34,8 +32,8 @@ function branch(branchHeight, branchWidth, angle){
 
   push();
   rotate(angle);
-  if (branchHeight < 20){
-    for (let k =0; k < 15; k++){
+  if (branchHeight < 15){
+    for (let k =0; k < 12; k++){
       fill(214, 140, 43);
       noStroke();
       let RNDW = Math.floor(Math.random() * 10 + 5);
@@ -48,8 +46,8 @@ function branch(branchHeight, branchWidth, angle){
   
   push();
   rotate(-angle);
-  if (branchHeight < 20){
-    for (let k =0; k < 15; k++){
+  if (branchHeight < 15){
+    for (let k =0; k < 12; k++){
       fill(214, 140, 43);
       noStroke();
       let RNDW = Math.floor(Math.random() * 10 + 5);
