@@ -33,7 +33,7 @@ function branch(branchHeight, branchWidth, angle){
   push();
   rotate(angle);
   if (branchHeight < 15){
-    for (let k =0; k < 12; k++){
+    for (let k =0; k < 2; k++){
       fill(214, 140, 43);
       noStroke();
       let RNDW = Math.floor(Math.random() * 10 + 5);
@@ -47,7 +47,7 @@ function branch(branchHeight, branchWidth, angle){
   push();
   rotate(-angle);
   if (branchHeight < 15){
-    for (let k =0; k < 12; k++){
+    for (let k = 0; k < 2; k++){
       fill(214, 140, 43);
       noStroke();
       let RNDW = Math.floor(Math.random() * 10 + 5);
