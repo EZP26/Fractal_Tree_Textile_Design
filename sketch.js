@@ -14,6 +14,7 @@ function setup(){
   branch(trunkHeight, uniWidth, 20);
 }
 
+
 function branch(branchHeight, branchWidth, angle){
   if (branchHeight < minBranchHeight){
     return;
@@ -32,15 +33,15 @@ function branch(branchHeight, branchWidth, angle){
 
   push();
   rotate(angle);
-  if (branchHeight < 22){
+  if (branchHeight < 30){
     for (let k =0; k < 5; k++){
       let RNDR = Math.floor(Math.random() * 50 + 180);
       let RNDG = Math.floor(Math.random() * 40 + 100);
       fill(RNDR, RNDG, 40);
       noStroke();
       let RNDW = Math.floor(Math.random() * 10 + 5);
-      let RNDH = Math.floor(Math.random() * 10 + 5);
-      ellipse(branchHeight, branchWidth, RNDH, RNDW);
+      let RNDH = Math.floor(Math.random() * 5 + 5);
+      ellipse(branchHeight, branchWidth / 2, RNDH, RNDW);
     }
   }
   branch(branchHeight, branchWidth, angle);
@@ -48,15 +49,15 @@ function branch(branchHeight, branchWidth, angle){
   
   push();
   rotate(-angle);
-  if (branchHeight < 22){
+  if (branchHeight < 30){
     for (let k = 0; k < 5; k++){
       let RNDR = Math.floor(Math.random() * 50 + 180);
       let RNDG = Math.floor(Math.random() * 40 + 100);
       fill(RNDR, RNDG, 40);
       noStroke();
       let RNDW = Math.floor(Math.random() * 10 + 5);
-      let RNDH = Math.floor(Math.random() * 10 + 5);
-      ellipse(branchHeight, branchWidth, RNDH, RNDW);
+      let RNDH = Math.floor(Math.random() * 5);
+      ellipse(branchHeight, branchWidth / 2, RNDH, RNDW);
     }
   }
   branch(branchHeight, branchWidth, angle);
