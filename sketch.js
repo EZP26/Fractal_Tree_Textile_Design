@@ -6,12 +6,26 @@ let petalHeight
 
 function setup(){
   frameRate(1);
-  createCanvas(800, 800);
+  createCanvas(1600, 1600);
   angleMode(DEGREES);
   background(220);
   stroke(92, 40, 6);
-  translate(width / 2, height);
+  translate(400, 800);
+  push();
   branch(trunkHeight, uniWidth, 20);
+  pop();
+  translate(800, 0);
+  push();
+  branch(trunkHeight, uniWidth, 20)
+  pop();
+  translate(0, 800);
+  push();
+  branch(trunkHeight, uniWidth, 20)
+  pop();
+  translate(-800, 0);
+  push();
+  branch(trunkHeight, uniWidth, 20);
+  pop();
 }
 
 
